@@ -1,0 +1,44 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Slap Battles  | Whale Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Credit",
+	Content = "@WhaleRoblox On YT/Roblox",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "> Main"
+})
+
+Tab:AddLabel("Coded By @WhaleRoblox On YT")
+Tab:AddLabel("Section One - Free Abilitys")
+
+Tab:AddButton({
+	Name = "Rhythm Explosion",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").rhythmevent:FireServer("AoeExplosion",0)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Null's Ability",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").NullAbility:FireServer()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Blasphemy's Piano",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Piano:FireServer()
+  	end    
+})
