@@ -42,3 +42,11 @@ Tab:AddButton({
       		game:GetService("ReplicatedStorage").Piano:FireServer()
   	end    
 })
+
+Tab:AddToggle({
+	Name = "SpeedRun",
+	Default = true,
+	Callback = function(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+	end    
+})
